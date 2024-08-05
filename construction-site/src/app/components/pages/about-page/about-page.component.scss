@@ -1,0 +1,73 @@
+@import "../../../../styles/variables";
+.about-page-section {
+  .numbers-increment {
+    display: flex;
+    justify-content: center;
+    background: $font-color3;
+    color: #ffffff;
+    .item {
+      text-align: center;
+      padding: 0 10px;
+      border-left: 1px solid $font-color2;
+
+      .name {
+        color: $font-color2;
+      }
+      &:nth-last-of-type(1) {
+        border-right: 1px solid $font-color2;
+      }
+    }
+  }
+
+  .main {
+    padding-top: $padding-top;
+    padding-bottom: 80px;
+
+    .bottom-content {
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px;
+        &:nth-of-type(even) {
+          flex-direction: row-reverse;
+        }
+        .content {
+          width: 50%;
+          padding: 20px;
+          .title {
+            color: $font-color3;
+          }
+        }
+        .image-container {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page-section {
+    .main {
+        padding-top: 50px;
+     padding-bottom: 60px;
+      .bottom-content {
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin:30px 5px;
+          .content {
+            width: 100%;
+            padding: 5px;
+          }
+          .image-container {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

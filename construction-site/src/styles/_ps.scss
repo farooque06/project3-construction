@@ -1,0 +1,69 @@
+@import '../styles/variables';
+.main {
+    padding: 40px 0;
+  .items {
+    justify-content: center;
+    flex-wrap: wrap;
+    .card {
+      width: 20rem;
+      margin: 20px;
+      .image {
+        min-height: 380px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .card-body {
+        transition: 1s;
+        .card-content {
+          display: none;
+          transition: 3s;
+        }
+      }
+      &:hover {
+        .card-body {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          background: $bg-layer;
+          color: $font-color2;
+          .card-content {
+            transition: 3s;
+            display: block;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:768px) {
+  .main {
+  .items {
+    .card {
+      width: 17rem;
+      margin: 20px 10px;
+      .image {
+        min-height: 360px;
+      }
+    }
+  }
+}
+
+}
+
+@media (max-width:425px) {
+  .main {
+    .items {
+      .card {
+        width: 100%;
+        margin: 20px 10px;
+        .image {
+          min-height: 360px;
+        }
+      }
+    }
+  }
+}

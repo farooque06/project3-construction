@@ -1,0 +1,53 @@
+<div class="container-fluid signup-container">
+    <h2 class="text-center">Login</h2>
+    <div class="form-container">
+        <form [formGroup]="loginForm" class="form">
+            <!-- Email Field -->
+            <div class="mb-3 form-group">
+                <label for="email" class="form-label">Email address:</label>
+                <div class="input-group">
+                    <input
+                        id="email"
+                        type="email"
+                        class="form-control input"
+                        [ngClass]="{'red-border': email?.touched && email?.invalid}"
+                        formControlName="email"
+                        required />
+                    <div class="error-message"
+                        *ngIf="email?.touched && email?.invalid">
+                        <span *ngIf="email?.errors?.['required']">This field is
+                            mandatory</span>
+                        <span *ngIf="email?.errors?.['pattern']">Enter a valid
+                            email</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Password Field -->
+            <div class="mb-3 form-group">
+                <label for="password" class="form-label">Password:</label>
+                <div class="input-group">
+                    <input
+                        id="password"
+                        type="password"
+                        class="form-control input"
+                        [ngClass]="{'red-border': password?.touched && password?.invalid}"
+                        formControlName="password"
+                        required />
+                    <div class="error-message"
+                        *ngIf="password?.touched && password?.invalid">
+                        <span *ngIf="password?.errors?.['required']">This field
+                            is mandatory</span>
+                        <span *ngIf="password?.errors?.['minlength']">Password
+                            must be at least 6 characters</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary"
+                [disabled]="loginForm.invalid"
+                (click)="handleSubmit()">Submit</button>
+            <button type="submit" class="btn btn-danger ml-5"
+                (click)="closeModal()">Close</button>
+        </form>
+    </div>
+</div>

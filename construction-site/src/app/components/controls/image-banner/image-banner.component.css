@@ -1,0 +1,40 @@
+.image-banner-section .banner-container {
+  position: relative;
+}
+.image-banner-section .banner-container::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  content: "";
+  background: rgba(0, 24, 41, 0.61);
+  z-index: 1;
+}
+.image-banner-section .banner-container .image {
+  height: 50vh;
+  width: 100%;
+}
+.image-banner-section .banner-container .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.image-banner-section .banner-container .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  max-width: 500px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 2;
+}
+.image-banner-section .banner-container .content .sub {
+  color: #fed304;
+}/*# sourceMappingURL=image-banner.component.css.map */

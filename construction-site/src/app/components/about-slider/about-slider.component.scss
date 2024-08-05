@@ -1,0 +1,94 @@
+@import "../../../styles/variables";
+.wrapper {
+  .main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    margin: 10px 0;
+    .image-container {
+      width: 500px;
+      height: 450px;
+      position: relative;
+      border-top-right-radius: 25%;
+      border-bottom-left-radius: 25%;
+      overflow: hidden;
+
+    }
+    .content {
+      max-width: 450px;
+      padding: 5px;
+      .title {
+        color: $font-color2;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    .main {
+      .image-container {
+        width: 420px;
+        height: 400px;
+      }
+      .content {
+        max-width: 350px;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    .main {
+      .image-container {
+        width: 100%;
+        max-width: 600px;
+        &::after {
+          z-index: 1;
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: $bg-layer;
+          opacity: 90%;
+        }
+      }
+      .content {
+       padding: 50px;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+
+        .title {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .wrapper {
+    .main {
+      padding: 20px;
+      .content {
+       padding: 30px;
+        .title {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+
+}

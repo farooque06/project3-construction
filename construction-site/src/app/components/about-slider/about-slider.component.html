@@ -1,0 +1,21 @@
+<ngb-carousel [interval]="4000" >
+	<ng-template  ngbSlide *ngFor=" let content of contents">
+		<div class="carousel-wrapper wrapper">
+            <div class="main">
+                <div class="image-container">
+                    <img src="{{content.image}}" alt="">
+                </div>
+                <div class="content">
+                <h4 class="title">{{content.title}}</h4>
+                <p class="p1">{{content.p1}}</p>
+                <p class="p2">{{content.p2}}</p>
+                <span *ngIf="content.p3">
+                    <p>{{content.p3}}</p>
+                    <p>{{content.p4}}</p>
+                    <p>{{content.p5}}</p>
+                </span>
+                </div>
+            </div>
+		</div>
+	</ng-template>
+</ngb-carousel>

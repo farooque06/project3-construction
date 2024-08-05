@@ -1,0 +1,20 @@
+@import "../../../../styles/variables";
+.contact-section {
+  background: $bg-color;
+
+  .top {
+    padding-top: $padding-top;
+    background: $bg-color;
+    color: #ffffff;
+    .title {
+      .sub {
+        color: $font-color2;
+      }
+    }
+    .form {
+      padding:40px 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+}

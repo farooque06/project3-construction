@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+.about-section{
+    background: $bg-color;
+    color: #ffffff;
+    .about-container{
+        padding-top:$padding-top;
+        padding-bottom: 60px;
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .project-bar{
+                display: flex;
+                justify-content: space-evenly;
+                flex: 1;
+                text-align: center;
+
+                .item{
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+
+    .about-section{
+    .about-container{
+        .top{
+            flex-wrap: wrap;
+            .project-bar{
+                justify-content: center;
+                color: $font-color2;
+                .item{
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}
+}

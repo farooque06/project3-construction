@@ -1,0 +1,83 @@
+<div class="container-fluid signup-container">
+    <h2 class="text-center">Sign Up</h2>
+    <div class="form-container">
+      <form [formGroup]="signupForm" class="form">
+        <!-- Name Field -->
+        <div class="mb-3 form-group">
+          <label for="name" class="form-label">Name:</label>
+          <div class="input-group">
+            <input
+              id="name"
+              type="text"
+              class="form-control input"
+              [ngClass]="{'red-border': name?.touched && name?.invalid}"
+              formControlName="name"
+              required
+            />
+            <div class="error-message" *ngIf="name?.touched && name?.invalid">
+              <span *ngIf="name?.errors?.['required']">This field is mandatory</span>
+              <span *ngIf="name?.errors?.['minlength']">Name must be at least 3 characters</span>
+            </div>
+          </div>
+        </div>
+        <!-- Email Field -->
+        <div class="mb-3 form-group">
+          <label for="email" class="form-label">Email address:</label>
+          <div class="input-group">
+            <input
+              id="email"
+              type="email"
+              class="form-control input"
+              [ngClass]="{'red-border': email?.touched && email?.invalid}"
+              formControlName="email"
+              required
+            />
+            <div class="error-message" *ngIf="email?.touched && email?.invalid">
+              <span *ngIf="email?.errors?.['required']">This field is mandatory</span>
+              <span *ngIf="email?.errors?.['pattern']">Enter a valid email</span>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Number Field -->
+        <div class="mb-3 form-group">
+          <label for="contactNumber" class="form-label">Contact Number:</label>
+          <div class="input-group">
+            <input
+              id="contactNumber"
+              type="text"
+              class="form-control input"
+              [ngClass]="{'red-border': contactNumber?.touched && contactNumber?.invalid}"
+              formControlName="contactNumber"
+              required
+            />
+            <div class="error-message" *ngIf="contactNumber?.touched && contactNumber?.invalid">
+              <span *ngIf="contactNumber?.errors?.['required']">This field is mandatory</span>
+              <span *ngIf="contactNumber?.errors?.['pattern']">The field is invalid</span>
+            </div>
+          </div>
+        </div>
+        <!-- Password Field -->
+        <div class="mb-3 form-group">
+          <label for="password" class="form-label">Password:</label>
+          <div class="input-group">
+            <input
+              id="password"
+              type="password"
+              class="form-control input"
+              [ngClass]="{'red-border': password?.touched && password?.invalid}"
+              formControlName="password"
+              required
+            />
+            <div class="error-message" *ngIf="password?.touched && password?.invalid">
+              <span *ngIf="password?.errors?.['required']">This field is mandatory</span>
+              <span *ngIf="password?.errors?.['minlength']">Password must be at least 6 characters</span>
+            </div>
+          </div>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid" (click)="handleSubmit()">Submit</button>
+        <button type="submit" class="btn btn-danger ml-5" (click)="closeModal()">Close</button>
+      </form>
+    </div>
+  </div>
+  

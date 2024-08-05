@@ -1,0 +1,145 @@
+@import "../styles/variables";
+h1,
+h2,
+h3,
+h5,
+h6,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.common-padding {
+  padding:0% 8%;
+}
+.common-padding2 {
+  padding:0% 12%;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+//
+// Left/right controls for nav
+//
+
+.carousel-control-prev,
+.carousel-control-next {
+  right: 5% !important;
+  top: 90% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: 80px !important;
+}
+
+.carousel-control-prev {
+  left: 80% !important;
+  right: 10% !important;
+}
+.carousel-indicators {
+  max-width: 300px !important;
+  margin-left: auto !important;
+  margin-right: 40% !important;
+}
+
+// common heading for home 
+.heading{
+  max-width: 650px;
+  padding-right: 8px;
+  .small-h{
+      color:$font-color2;
+      &.has-color3{
+        color:$font-color3;
+      }
+  }
+}
+
+// more
+.more{
+  margin-left: 20px;
+  .link{
+    text-decoration: none;
+    color: $font-color2;
+    display: flex;
+    align-items: center;
+    .line{
+      margin-right: 5px;
+      display: block;
+      height: 2px;
+      width: 40px;
+      background-color: $font-color2;
+    }
+  }
+}
+
+
+@media (max-width:1024px) {
+  .common-padding {
+    padding:0% 5%;
+  }
+  .common-padding2 {
+    padding:0% 6%;
+  }
+}
+
+@media (max-width:768px) {
+  // common heading for home 
+.heading{
+  max-width: 650px;
+  padding-right: 8px;
+  .small-h{
+      color:$font-color2;
+      &.has-color3{
+        color:$font-color3;
+      }
+  }
+}
+.carousel-control-prev,
+.carousel-control-next {
+  right: 0 !important;
+  top: 105% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: 80px !important;
+}
+
+.carousel-control-prev {
+  left: 60% !important;
+  right: 10% !important;
+}
+
+.carousel-indicators {
+  max-width: 300px !important;
+  margin: auto !important;
+  margin-right: auto !important;
+}
+}
+
+@media (max-width:425px) {
+  .common-padding {
+    padding:0% 1%;
+  }
+  .common-padding2 {
+    padding:0% 2%;
+  }
+
+  .heading{
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}

@@ -1,0 +1,28 @@
+<div class="product-section">
+    <div class="product-container common-padding">
+        <div class="top d-flex align-items-center">
+            <div class="heading">
+                <span class="small-h">EXPLORE OUR PROJECTS</span>
+                <h1>Welcome to Build Gurus Projects Section!</h1>
+            </div>
+            <div class="more text-align">
+                <a href class="link"><span class="line"></span>VIEW ALL</a>
+            </div>
+        </div>
+        <div class="main">
+            <div class="items d-flex">
+                <div class="card" 
+                    *ngFor=" let content of productsContent">
+                    <div class="image" style="max-height: 400px;">
+                        <img src="{{content.image}}" class="card-img-top"
+                            alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-content">{{content.type}}</p>
+                        <h5 class="card-title">{{content.title}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  position: relative;
+}
+
+
+
+@import "./styles/base", "./styles/variables";
+
+.offcanvas {
+  background-color: $bg-layer !important;
+  color: #ffffff !important
+}
+.modal-content{
+  background: $bg-layer !important;
+  color: $font-color2 !important;
+ }
+@import 'ngx-toastr/toastr';
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";

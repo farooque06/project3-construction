@@ -1,0 +1,20 @@
+<app-image-banner [src]="bannerBg" [title]="bannerTitle" [subTitle]="bannerSubTitle" ></app-image-banner>
+<div class="project-section">
+    <div class="project-container common-padding2">
+        <div class="main">
+            <div class="items d-flex">
+                <div class="card" 
+                    *ngFor=" let content of productsContent">
+                    <div class="image" style="max-height: 400px;">
+                        <img src="{{content.image}}" class="card-img-top"
+                            alt="...">
+                    </div>
+                    <div class="card-body">
+                        <p class="card-cont">{{content.type}}</p>
+                        <h5 class="card-title">{{content.title}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

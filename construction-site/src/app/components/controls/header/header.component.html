@@ -1,0 +1,71 @@
+<div class="header-section ">
+    <nav class="nav-section common-padding">
+        <div class="logo">
+            <div class="image">
+                <img routerLink="home"
+                    src="../../../../assets/images/logo/logo.png" alt>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="menu">
+                <!-- <li><a routerLink="home" >home</a></li> -->
+                <li><a routerLink="about">about us</a></li>
+                <li><a routerLink="service">our services</a></li>
+                <li><a routerLink="project">Projects</a></li>
+                <li><a routerLink="contact">contact</a></li>
+                <li>
+
+                    <div ngbDropdown class="d-inline-block">
+                        <button type="button"
+                            class="btn btn-outline-primary"
+                            id="dropdownBasic1" ngbDropdownToggle>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16"
+                                fill="currentColor"
+                                class="bi bi-person-fill"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </button>
+                        <div ngbDropdownMenu
+                            aria-labelledby="dropdownBasic1">
+                            <button ngbDropdownItem
+                                (click)="loginAction()">Login</button>
+                            <button ngbDropdownItem
+                                (click)="signupAction()">Signup</button>
+                            <button ngbDropdownItem
+                                (click)="forgetPasswordAction()">Forget
+                                Password</button>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+
+            <div class="toggle-menu" (click)="open(content)">
+                <img src="../../../../assets/icons/menu.png" alt>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="toggle-content">
+    <ng-template #content let-offcanvas>
+        <div class="offcanvas-header d-flex justify-content-between">
+            <h4 class="offcanvas-title" id="offcanvas-basic-title">Menu</h4>
+            <div class="close" (click)="offcanvas.dismiss()">
+                <img src="../../../../assets/icons/close.png" alt>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="menu">
+                <li><a routerLink="home">home</a></li>
+                <li><a routerLink="about">about us</a></li>
+                <li><a routerLink="service">our services</a></li>
+                <li><a routerLink="project">Projects</a></li>
+                <li><a routerLink="contact">contact</a></li>
+            </ul>
+        </div>
+    </ng-template>
+</div>

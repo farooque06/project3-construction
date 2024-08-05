@@ -1,0 +1,61 @@
+.banner-section .banner-container {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 24, 41, 0.61);
+  height: 100vh;
+}
+.banner-section .banner-container::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  content: "";
+  background: rgba(0, 24, 41, 0.61);
+  z-index: 1;
+}
+.banner-section .banner-container .video {
+  height: 100%;
+}
+.banner-section .banner-container .video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.banner-section .banner-container .content {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  right: 0;
+  max-width: 900px;
+  margin: auto;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
+.banner-section .banner-container .content .main {
+  transition: 0.5s;
+  font-size: 70px;
+}
+.banner-section .banner-container .content .main:hover {
+  -webkit-text-stroke: 1px #fed304;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .banner-section .banner-container .content .main {
+    font-size: 50px;
+  }
+}
+@media (max-width: 425px) {
+  .banner-section .banner-container {
+    height: 60vh;
+  }
+  .banner-section .banner-container .content .main {
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=banner.component.css.map */

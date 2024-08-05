@@ -1,0 +1,116 @@
+.footer-section {
+  background-color: #001829;
+}
+.footer-section .footer-container {
+  background-image: url(../../../../assets/images/aboutbg2.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 300px;
+  padding-top: 80px;
+}
+.footer-section .footer-container .main {
+  background-image: url(../../../../assets/images/aboutbg2.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-position-x: -100px;
+  background-size: 300px;
+}
+.footer-section .footer-container .main .information {
+  color: #ffffff;
+  text-align: center;
+}
+.footer-section .footer-container .main .information .logo {
+  width: 280px;
+  margin: auto;
+}
+.footer-section .footer-container .main .information .social-media {
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 10px;
+}
+.footer-section .footer-container .main .information .social-media .item {
+  margin: 0 8px;
+  width: 30px;
+}
+.footer-section .footer-container .main .information .social-media .item:hover {
+  transition: 0.4s;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  zoom: 120%;
+}
+.footer-section .footer-container .main .quick-links {
+  padding: 40px 0;
+  text-transform: capitalize;
+  max-width: 900px;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #fed304;
+}
+
+@media (max-width: 768px) {
+  .footer-section .footer-container {
+    background-size: 300px;
+    padding-top: 80px;
+  }
+  .footer-section .footer-container .main {
+    background-image: url(../../../../assets/images/aboutbg2.png);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-position-x: -50px;
+    background-size: 300px;
+  }
+  .footer-section .footer-container .main .information {
+    color: #ffffff;
+    text-align: center;
+  }
+  .footer-section .footer-container .main .information .logo {
+    width: 280px;
+    margin: auto;
+  }
+  .footer-section .footer-container .main .information .social-media {
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .footer-section .footer-container .main .information .social-media .item {
+    margin: 0 8px;
+    width: 30px;
+  }
+  .footer-section .footer-container .main .information .social-media .item:hover {
+    transition: 0.4s;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    zoom: 120%;
+  }
+  .footer-section .footer-container .main .quick-links {
+    padding: 40px 0;
+    text-transform: capitalize;
+    max-width: 900px;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 425px) {
+  .footer-section .footer-container {
+    background-size: 250px;
+    background-position-x: 150%;
+  }
+  .footer-section .footer-container .main {
+    background-position-x: -90px;
+    background-size: 250px;
+  }
+  .footer-section .footer-container .main .information .logo {
+    width: 240px;
+  }
+}/*# sourceMappingURL=footer.component.css.map */

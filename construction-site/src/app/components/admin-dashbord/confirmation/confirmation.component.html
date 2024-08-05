@@ -1,0 +1,12 @@
+
+<div class="container-fluid signup-container">
+    <div class="form">
+    <h4>Confirmation</h4>
+    <h2 class="text-center">{{ message }}</h2>
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary"
+    (click)="modalService.dismissAll('Confirm')">Yes</button>
+    <button type="submit" class="btn btn-danger ml-5"
+    (click)="modalService.dismissAll('Cancel')">No</button>
+</div>
+</div>

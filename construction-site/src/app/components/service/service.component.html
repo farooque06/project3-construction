@@ -1,0 +1,24 @@
+<div class="services-section">
+    <div class="service-container common-padding2">
+        <div class="heading">
+            <span class="small-h has-color3">OUR SERVICES</span>
+            <h1>Crafting Your Vision: Our Services</h1>
+        </div>
+        <div class="main">
+            <div class="items d-flex">
+
+                <div class="card" 
+                    *ngFor=" let content of servicesContent">
+                    <div class="image" style="max-height: 400px;">
+                        <img src="{{content.image}}" class="card-img-top"
+                            alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{content.title}}</h5>
+                        <p class="card-content">{{content.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

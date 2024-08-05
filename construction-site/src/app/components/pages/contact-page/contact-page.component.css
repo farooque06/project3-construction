@@ -1,0 +1,16 @@
+.contact-section {
+  background: #001829;
+}
+.contact-section .top {
+  padding-top: 100px;
+  background: #001829;
+  color: #ffffff;
+}
+.contact-section .top .title .sub {
+  color: #fed304;
+}
+.contact-section .top .form {
+  padding: 40px 10px;
+  max-width: 600px;
+  margin: auto;
+}/*# sourceMappingURL=contact-page.component.css.map */

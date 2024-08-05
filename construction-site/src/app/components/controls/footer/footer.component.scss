@@ -1,0 +1,126 @@
+@import "../../../../styles/variables";
+.footer-section {
+  background-color: $bg-color;
+  // background-size: contain;
+  .footer-container {
+    background-image: url(../../../../assets/images/aboutbg2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 300px;
+    padding-top: $padding-top2;
+    .main {
+      background-image: url(../../../../assets/images/aboutbg2.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-position-x: -100px;
+      background-size: 300px;
+      .information {
+        color: #ffffff;
+        text-align: center;
+        .logo {
+          width: 280px;
+          margin: auto;
+        }
+        .social-media {
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          margin-top: 10px;
+          .item {
+            margin: 0 8px;
+            width: 30px;
+            &:hover {
+              transition: 0.4s;
+              transform: rotate(360deg);
+              -webkit-transform: rotate(360deg);
+              -ms-transform: rotate(360deg);
+              zoom: 120%;
+            }
+          }
+        }
+      }
+      .quick-links {
+        padding: 40px 0;
+        text-transform: capitalize;
+        max-width: 900px;
+        margin: auto;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  &:hover {
+    color: $font-color2;
+  }
+}
+
+
+@media (max-width:768px) {
+  .footer-section {
+    .footer-container {
+      background-size: 300px;
+      padding-top: $padding-top2;
+      .main {
+        background-image: url(../../../../assets/images/aboutbg2.png);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-position-x: -50px;
+        background-size: 300px;
+        .information {
+          color: #ffffff;
+          text-align: center;
+          .logo {
+            width: 280px;
+            margin: auto;
+          }
+          .social-media {
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 10px;
+            .item {
+              margin: 0 8px;
+              width: 30px;
+              &:hover {
+                transition: 0.4s;
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                zoom: 120%;
+              }
+            }
+          }
+        }
+        .quick-links {
+          padding: 40px 0;
+          text-transform: capitalize;
+          max-width: 900px;
+          margin: auto;
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .footer-section {
+    .footer-container {
+      background-size: 250px;
+      background-position-x: 150%;
+      .main {
+        background-position-x: -90px;
+        background-size: 250px;
+        .information {
+          .logo {
+            width: 240px;
+          }
+        }
+      }
+    }
+  }
+}

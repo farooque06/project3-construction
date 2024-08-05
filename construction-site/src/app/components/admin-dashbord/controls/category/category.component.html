@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{dialogAction}} category</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modalService.dismissAll('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="categoryForm">
+      <div class="mb-3">
+        <label for="categoryName" class="form-label">Category Name</label>
+        <input type="text" id="categoryName" class="form-control" formControlName="name">
+      </div>
+      <!-- <input *ngIf="isEdit" type="text" [value]="category.id" hidden> -->
+     
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalService.dismissAll('Close click')">Close</button>
+    <button type="button" class="btn btn-primary" (click)="handleSubmit()">{{action}}</button>
+  </div>
+  

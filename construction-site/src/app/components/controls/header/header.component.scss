@@ -1,0 +1,86 @@
+@import "../../../../styles/variables";
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  // background:$header-bg;
+  &::after {
+    z-index: -1;
+    content: "";
+    height: 140px;
+    width: 100%;
+    background: $header-bg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+  .nav-section {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      padding: 20px 0;
+      .image {
+        width: 190px;
+        cursor: pointer;
+      }
+    }
+    .nav {
+      .menu {
+        li {
+          text-transform: uppercase;
+          display: inline;
+          margin-left: 30px;
+          font-size: 15px;
+          cursor: pointer;
+          &:nth-of-type(1) {
+            margin-left: 0;
+          }
+          a {
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+      .toggle-menu{
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .header-section {
+    .nav-section {
+      .nav {
+        .menu {
+          display: none;
+        }
+        .toggle-menu{
+            display: block;
+        }
+      }
+    }
+  }
+
+  .offcanvas-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .menu{
+        font-size: 24px;
+        text-transform: capitalize;
+       
+        a{
+            text-decoration: none;
+            color: $font-color2;
+        }
+        
+    }
+  }
+}
+
